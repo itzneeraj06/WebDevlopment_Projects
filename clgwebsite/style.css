@@ -1,0 +1,334 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.headerimg {
+    background-image: url(bghome.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 739px;
+    width: 100%;
+}
+
+.nav {
+    position: absolute;
+    display: flex;
+    left: 550px;
+    top: 50px;
+    list-style: none;
+
+
+}
+
+.nav li a {
+
+    cursor: pointer;
+    margin: 2px 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.nav li a:hover {
+    border-bottom: 1px solid brown;
+    border-top: 1px solid brown;
+    margin-bottom: 5px
+}
+
+.headinghome {
+    position: relative;
+    text-align: center;
+    top: 250px;
+    font-size: 70px;
+    color: white;
+    background: transparent;
+}
+
+.prhome {
+
+    background: transparent;
+    position: relative;
+    text-align: center;
+    top: 270px;
+    font-size: 15px;
+    color: white;
+    width: 40%;
+    margin: 2px 460px;
+
+}
+
+.homebtn {
+    position: relative;
+    top: 300px;
+    left: 700px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px 20px;
+    cursor: pointer;
+
+    background: transparent;
+
+}
+
+.homebtn:hover {
+    position: relative;
+    top: 300px;
+    left: 700px;
+    color: white;
+    background-color: brown;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.course h2 {
+    font-size: 35px;
+    font-weight: 600;
+
+    background: transparent;
+}
+
+.course p {
+    color: #777;
+    font-size: 15px;
+    font-weight: 30px;
+    line-height: 20px;
+    padding-top: 10px;
+
+    background: transparent;
+
+}
+
+.course2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+
+    background: transparent;
+
+}
+
+.c3 {
+
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    flex-basis: 30%;
+    transition: 0.5s;
+
+    background: transparent;
+    border: 1px solid;
+
+}
+
+.c3:hover {
+    box-shadow: 0px 0px 20px 0px rgba(255, 2, 2, 0.5);
+}
+
+
+.campus {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.campus-col {
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.campus-col img {
+    width: 100%;
+    display: block;
+    background-size: contain;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(118, 88, 100, 0.79);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 600;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+
+    background: transparent;
+}
+
+.layer:hover h3 {
+    bottom: 30%;
+    opacity: 1;
+
+
+}
+
+.facilities {
+
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 150px;
+
+
+}
+
+
+.fc {
+    margin-top: 50px;
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+
+
+}
+
+.fc img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities h3 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.facilities p {
+    color: #777;
+    font-size: 15px;
+    font-weight: 30px;
+    line-height: 20px;
+    padding-top: 10px;
+
+}
+
+.container4 {
+    width: 100%;
+    background-color: #212529;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+
+
+}
+
+
+.f2 {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+
+}
+
+i {
+    margin: 7px 7px;
+
+}
+
+.navbar-brand {
+    font-family: 'Fasthand', cursive;
+    font-size: 2.5rem;
+}
+
+.navbar {
+    padding-bottom: 3.5rem;
+    margin: auto 5%;
+}
+
+.nav-item {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.nav-link:hover {
+    color: #9f704b;
+}
+
+.nav-contact {
+    background-color: #966844;
+}
+
+.nav-contact:hover {
+    background-color: #c4a792;
+}
+
+.footer {
+    width: 100%;
+    background: #cbc6c6;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    
+}
+
+.foo1 {
+    text-align: center;
+}
+
+.foo2 {
+    display: flex;
+    justify-content: center;
+}
+.l {
+    height: 20px;
+    margin: 5px;
+}
+.foo3 {
+    margin-top: 30px;
+    text-align:center;
+}
