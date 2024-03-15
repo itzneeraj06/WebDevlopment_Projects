@@ -10,7 +10,7 @@ const Card = (props) => {
 
     return (
         <div>
-            <img src={image} alt="" />
+            <img src={image} alt="" height={200}/>
             <p>{price}</p>
             <p>{city}</p>
             <p>{info}</p>
