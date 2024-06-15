@@ -1,52 +1,65 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body{
+        body {
             background-color: #dedede;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
-        .memegenerator{
+
+        .memegenerator {
             text-align: center;
         }
-        .memegenerator img
-        {
-            height: 450px;
-            
+
+        .memegenerator img {
+            /* height: 450px; */
+            width: 30%;
 
         }
-        .memegenerator .btn{
+
+        @media (max-width:450px) {
+            .memegenerator img {
+                width: 90%;
+            }
+        }
+
+        .memegenerator .btn {
             padding: 8px 20px;
             border: none;
             border-left: 4px solid #222;
             border-right: 4px solid #222;
-            margin :24px 0;
+            margin: 24px 0;
             font-size: 20px;
-            color:#f64d4d;
+            color: #f64d4d;
             background: #fff;
 
 
         }
-        .memegenerator .btn:hover{
+
+        .memegenerator .btn:hover {
             padding: 8px 35px;
-            border:0 8px solid #222 ;
-            letter-spacing: 3px ;
+            border: 0 8px solid #222;
+            letter-spacing: 3px;
             transition: all 400ms ease;
         }
-        .author{
+
+        .author {
             margin: 8px;
 
         }
-
     </style>
 </head>
+
 <body>
     <div class="memegenerator">
-        <p><i class="fa-solid fa-arrow-down"></i>...click here to generate meme...<i class="fa-solid fa-arrow-down"></i></p>
+        <p><i class="fa-solid fa-arrow-down"></i>...click here to generate meme...<i class="fa-solid fa-arrow-down"></i>
+        </p>
         <button class="btn">generate Meme </button>
         <h2 class="head">loading...</h2>
         <img src="" alt="">
@@ -54,37 +67,39 @@
 
     </div>
     <script>
-        const btn= document.querySelector(".btn")
-        const heading= document.querySelector(".head")
-        const imgtag=document.querySelector(".memegenerator img ")
-        const authorname= document.querySelector(".author")
+        const btn = document.querySelector(".btn")
+        const heading = document.querySelector(".head")
+        const imgtag = document.querySelector(".memegenerator img ")
+        const authorname = document.querySelector(".author")
 
         //function that update details 
-        const updatedetails =(url,title,author)=>{
-            imgtag.setAttribute("src",url);
-            authorname.innerHTML=author;
-            heading.innerHTML=title;
+        const updatedetails = (url, title, author) => {
+            imgtag.setAttribute("src", url);
+            authorname.innerHTML = "author : " + author;
+            heading.innerHTML = title;
 
 
         }
 
-        //api calling when btn ic click
-        btn.addEventListener('click',()=>{
-            fetch('https://meme-api.com/gimme/wholesomememes')
-            .then((response)=>response.json())
-            .then(data=>{updatedetails(data.url,data.title,data.author)})
-            .catch(function(err){console.log(err);})
-
-
-
-
-
+        // api calling when btn ic click
+        btn.addEventListener('click', async () => {
+            await fetch('https://meme-api.com/gimme/wholesomememes')
+                .then((response) => response.json())
+                .then(data => { updatedetails(data.url, data.title, data.author) })
+                .catch(function (err) { console.log("fetch failed", err); })
         })
 
 
 
-        
+
 
     </script>
 </body>
+
 </html>
+<!-- async  function handleer(){
+            
+    response =await fetch('https://meme-api.com/gimme/wholesomememes')
+    data=await response.json();
+    updatedetails(data.url,data.title,data.author);
+ } -->
